@@ -1,0 +1,285 @@
+@charset "utf-8";
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif, system-ui, -apple-system, 
+    BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+    'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #191818;
+}
+
+
+/* Header styles */
+header {
+    background-color: #201f1f;
+    color: #fff;
+    padding: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color:rgb(75, 135, 254) ;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0px;
+}
+
+nav ul li  {
+    display: inline;
+    margin-right: 25px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #aaa;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.image {
+    background-color: #fff;
+    color: #333;
+    width: 55px;
+    height: 55px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Main styles */
+main {
+    padding: 60px 300px;
+    margin: 20px ;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.textarea-container {
+    position: relative;
+}
+
+form textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    resize: none;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    display: flex;
+    background-color: #252424;
+    color: #fff;
+    padding: 10px;
+}
+
+.textarea-container input[type="file"] {
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #fff;
+    left: 10px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.textarea-container button {
+    background-color: #007bff;
+    color: #fff;
+    padding:7px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.textarea-container button:hover {
+    background-color: #024b99;
+    transition:  2s ease-in-out;
+}
+
+.postsSection {
+    width: 100%;
+    height: 200px;
+    resize: none;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    display: flex;
+    margin: 20px 0;
+    display: none;
+}
+
+.post-form {
+    margin-bottom: 20px;
+}
+
+.post-image {
+    border-radius: 5px;
+    max-width: 100%; /* Ensure the image does not exceed the width of its container */
+    height: auto; /* Maintain aspect ratio while fitting the image within its container */
+}
+
+.post-container {
+    margin-bottom: 20px; /* Add some space between each post container */
+    background-color: #fefefe;
+    padding: 10px; /* Add padding to the post container */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+    
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.8); /* Fallback color with opacity */
+  color: #000000;
+  align-items: center;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  z-index: 1; /* Sit on top */
+  width: 100%; /* Full width */
+  height: 80%;
+  max-width: 600px;
+  font-size: 17px;
+  left: 50%;
+  right: 50%;
+  margin: 20px;
+  top: 50%;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content p {
+    margin: 10px;
+    font-weight: 400;
+}
+
+.close {
+    color: #aaa;
+    background-color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: 200;
+    z-index: 9999;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(143, 36, 105);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal.open,
+.modal-overlay.open {
+    display: flex; /* Show modal and overlay when open */
+}
+
+/* For small screens */
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 10px 20px; /* Adjust header padding */
+    }
+
+    nav ul li a {
+        font-size: 15px;
+        margin: 1px;
+    }
+
+    main {
+        padding: 20px; /* Adjust main padding */
+    }
+
+    form textarea {
+        height: 150px; /* Reduce textarea height */
+    }
+
+    .profile-pic {
+        width: 100%; /* Adjust profile picture size */
+    }
+
+    .user-name {
+        font-size: 16px; /* Adjust font size for user name */
+    }
+}
+
+/* For medium screens */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    header {
+        padding: 10px 40px; /* Adjust header padding */
+    }
+
+    main {
+        padding: 40px; /* Adjust main padding */
+    }
+
+    form textarea {
+        height: 180px; /* Adjust textarea height */
+    }
+
+    .profile-pic {
+        width: 100%; /* Adjust profile picture size */
+    }
+
+    .user-name {
+        font-size: 18px; /* Adjust font size for user name */
+    }
+}
+
+/* For large screens */
+@media only screen and (min-width: 1025px) {
+    header {
+        padding: 10px 60px; /* Default header padding */
+    }
+
+    main {
+        padding: 60px 300px; /* Default main padding */
+    }
+
+    form textarea {
+        height: 200px; /* Default textarea height */
+    }
+
+    .profile-pic {
+        width: 100%; /* Default profile picture size */
+    }
+
+    .user-name {
+        font-size: 20px; /* Default font size for user name */
+    }
+}
+
+
+
